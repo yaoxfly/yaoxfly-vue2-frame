@@ -8,7 +8,11 @@ module.exports = {
     parser: "babel-eslint"
   },
   rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
+    // "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off"
+  },
+  globals: {
+    //定义全局参数，通过eslint验证
+    Yx: true
   }
 };
