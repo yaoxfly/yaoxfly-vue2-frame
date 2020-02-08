@@ -63,6 +63,7 @@ module.exports = {
         vuex: "Vuex",
         "vue-router": "VueRouter",
         flyio: "flyio"
+        // axios:axios
       }
     });
 

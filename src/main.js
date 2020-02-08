@@ -6,7 +6,7 @@ import store from "./store";
 //引入rem类，配合postcss-plugin-px2rem插件效果更佳
 import "yaoxfly-flexible";
 import YxTools from "yaoxfly-tools";
-// import "yaoxfly-utils";
+import "yaoxfly-utils";
 import Fly from "flyio/dist/npm/fly.js";
 let fly = new Fly();
 console.log(fly);
