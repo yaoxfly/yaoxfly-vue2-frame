@@ -10,7 +10,6 @@ import YxTools from "yaoxfly-tools";
 import Fly from "flyio/dist/npm/fly.js";
 let fly = new Fly();
 console.log(fly);
-
 YxTools.ForbidScaling()
   .setForbidScaling({ preventDefault: true, message: true })
   .then(res => {

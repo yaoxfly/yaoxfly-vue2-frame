@@ -59,11 +59,10 @@ module.exports = {
     //cdn 配置
     Object.assign(config, {
       externals: {
-        // vue: "Vue"
-        // vuex: "Vuex",
-        // "vue-router": "VueRouter",
-        // axios: "axios"
-        // moment: "moment"
+        vue: "Vue",
+        vuex: "Vuex",
+        "vue-router": "VueRouter",
+        flyio: "flyio"
       }
     });
 
