@@ -32,10 +32,9 @@ module.exports = {
       .add("babel-polyfill")
       .end();
     //设置访问的别名
-    // config.resolve.alias
-    //   .set("@", resolve("src"))
-    //   .set("@css", resolve("src/assets/css"))
-    //   .set("@js", resolve("src/assets/public"));
+    config.resolve.alias.set("@", resolve("src"));
+    // .set("@css", resolve("src/assets/css"))
+    // .set("@js", resolve("src/assets/public"));
     config.plugins.delete("preload");
     config.plugins.delete("prefetch");
     config.resolve.symlinks(true);
@@ -44,15 +43,15 @@ module.exports = {
   css: {
     // 是否使用css分离插件 ExtractTextPlugin
     extract: false,
-    sourceMap: false,
-    loaderOptions: {
-      // sass: {
-      //   data: `
-      //     @import "@/assets/css/style.scss";
-      //   `
-      // }
-    },
-    modules: false
+    sourceMap: false
+    // loaderOptions: {
+    // sass: {
+    //   data: `
+    //     @import "@/assets/css/style.scss";
+    //   `
+    // }
+    // },
+    // modules: false
   },
 
   configureWebpack: config => {
