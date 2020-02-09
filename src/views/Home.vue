@@ -10,18 +10,43 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
   name: "Home",
   components: {
     HelloWorld
+  },
+
+  mounted() {
+    // 测试
+    // this.getTest();
+    // this.postTest();
+    // this.putTest();
+    // this.deleteTest();
+  },
+
+  methods: {
+    // async getTest() {
+    //   const res = await this.$Request.getTest();
+    //   console.log(res);
+    // },
+    // async postTest() {
+    //   const res = await this.$Request.postTest();
+    //   console.log(res);
+    // },
+    // async putTest() {
+    //   const res = await this.$Request.putTest();
+    //   console.log(res);
+    // },
+    // async deleteTest() {
+    //   const res = await this.$Request.deleteTest();
+    //   console.log(res);
+    // }
   }
 };
 </script>
 
 <style lang="scss" scoped>
 $a: red;
-
 .a {
   display: flex;
   color: $a;

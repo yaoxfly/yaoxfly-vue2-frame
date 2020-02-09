@@ -38,22 +38,22 @@ module.exports = {
     //   .set("@js", resolve("src/assets/public"));
     config.plugins.delete("preload");
     config.plugins.delete("prefetch");
-    // config.resolve.symlinks(true)
+    config.resolve.symlinks(true);
   },
 
-  // css: {
-  //   // 是否使用css分离插件 ExtractTextPlugin
-  //   extract: false,
-  //   sourceMap: false,
-  //   loaderOptions: {
-  //     // sass: {
-  //     //   data: `
-  //     //     @import "@/assets/css/style.scss";
-  //     //   `
-  //     // }
-  //   },
-  //   modules: false
-  // },
+  css: {
+    // 是否使用css分离插件 ExtractTextPlugin
+    extract: false,
+    sourceMap: false,
+    loaderOptions: {
+      // sass: {
+      //   data: `
+      //     @import "@/assets/css/style.scss";
+      //   `
+      // }
+    },
+    modules: false
+  },
 
   configureWebpack: config => {
     //cdn 配置
@@ -81,11 +81,12 @@ module.exports = {
   },
 
   devServer: {
-    open: true,
-    disableHostCheck: true,
+    open: true, //浏览器中打开
+    disableHostCheck: true, //防止 invalid host header
     compress: false, // 开启压缩
     hot: true, //热更新
     overlay: {
+      //出现编译器错误或警告时，在浏览器中显示全屏覆盖层
       warnings: true,
       errors: true
     }

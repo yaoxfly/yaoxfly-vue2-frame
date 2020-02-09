@@ -7,9 +7,18 @@ import store from "./store";
 import "yaoxfly-flexible";
 import YxTools from "yaoxfly-tools";
 import "yaoxfly-utils";
-import Fly from "flyio/dist/npm/fly.js";
-let fly = new Fly();
-console.log(fly);
+import YxRequest from "./request";
+import Request from "./request/api";
+
+//需要添加到vue原型链的方法
+const prototype = {
+  $Request: new Request()
+};
+
+Object.keys(prototype).forEach(key => {
+  Vue.prototype[key] = prototype[key];
+});
+
 YxTools.ForbidScaling()
   .setForbidScaling({ preventDefault: true, message: true })
   .then(res => {
@@ -21,9 +30,9 @@ YxTools.ForbidScaling()
     }
   });
 Vue.config.productionTip = false;
-
 new Vue({
   router,
   store,
+  YxRequest,
   render: h => h(App)
 }).$mount("#app");
