@@ -22,6 +22,7 @@ export default {
     // this.postTest();
     // this.putTest();
     // this.deleteTest();
+    // console.log(this.$store.getters.getTest);
   },
 
   methods: {
