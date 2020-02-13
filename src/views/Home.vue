@@ -4,12 +4,13 @@
     <HelloWorld msg="Welcome to Your Vue.js App" />
 
     <span class="a">111</span>
+    <Test></Test>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import HelloWorld from "@/components/hello-world/HelloWorld.vue";
 export default {
   name: "Home",
   components: {
@@ -22,7 +23,10 @@ export default {
     // this.postTest();
     // this.putTest();
     // this.deleteTest();
+    // this.$store.commit("TEST", 22);
+    // this.$store.dispatch("TEST", 33);
     // console.log(this.$store.getters.getTest);
+    // console.log(this.$store.state.test);
   },
 
   methods: {

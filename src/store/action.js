@@ -4,8 +4,8 @@
   二、使用 
     import { mapActions } from'vuex'
     methods: {
-    //将this.tips映射成 this.$store.dispatch('tips')
-      ...mapActions({'tips':tips})
+    //将this.setTest映射成 this.$store.dispatch('TEST')
+      ...mapActions({'setTest':TEST})
     }
 */
 import * as types from "./mutation-types";

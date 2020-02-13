@@ -7,7 +7,7 @@
     import { mapGetters } from 'vuex'
     computed: {
       ...mapGetters([
-        'fullName'
+        'getTest'
       ])
     }
 */

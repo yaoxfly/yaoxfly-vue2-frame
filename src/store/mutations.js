@@ -4,11 +4,11 @@
    2.使用mapMutations辅助函数将组件中的methods映射为store.commit调用。
  二、使用
   import { mapMutations } from'vuex'
-   methods: {
-      // 将this.tips映射成 this.$store.commit('tips')
+  methods: {
+      // 将this.setTest映射成this.$store.commit('TEST')
        ...mapMutations({
-         'tips': 'tips'
-       })
+         'setTest': 'TEST'
+      })
     }
  */
 import * as types from "./mutation-types";

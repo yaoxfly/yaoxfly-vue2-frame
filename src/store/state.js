@@ -5,7 +5,7 @@
     import { mapState } from'vuex'
     computed: {
     ...mapState({
-      'user': 'user'
+      'getTest': 'test'
     })
   }
 */

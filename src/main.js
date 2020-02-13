@@ -10,6 +10,8 @@ import "yaoxfly-utils";
 import YxRequest from "./request";
 import Request from "./request/api";
 
+import "./components";
+
 //需要添加到vue原型链的方法
 const prototype = {
   $Request: new Request()
