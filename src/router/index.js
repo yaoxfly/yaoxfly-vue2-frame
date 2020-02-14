@@ -9,7 +9,7 @@ let routes = [
     component: Home,
     children: []
   },
-  //路径出错重定向到首页
+  //路径重定向到首页
   {
     path: "*",
     redirect: "/"

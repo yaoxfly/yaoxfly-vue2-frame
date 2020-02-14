@@ -1,5 +1,16 @@
-import Home from "./Home";
-const fun = [Home]; //需要继承的方法
+/*自动引入所有的接口类 */
+const apiContext = require.context("./", true, /\.js$/);
+let fun = [];
+apiContext.keys().forEach(item => {
+  if (item.startsWith("./index")) {
+    return;
+  }
+  //根据key获取引入的module
+  const apiModule = apiContext(item);
+  const api = apiModule.default || apiModule;
+  fun.push(api);
+});
+
 /**
  * @description 多继承
  * @author  yx

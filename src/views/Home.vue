@@ -29,6 +29,7 @@ export default {
     // this.$store.dispatch("TEST", 33);
     // console.log(this.$store.getters.getTest);
     // console.log(this.$store.state.test);
+    // console.log(this.$store.state.test.modules);
   },
 
   methods: {

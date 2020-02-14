@@ -1,3 +1,4 @@
+/* 请求类配置 */
 /* eslint-disable */
 import Vue from "vue";
 import qs from "qs";
