@@ -2,9 +2,12 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/About">About</router-link> |
+      <router-link to="/AutoTest">AutoTest</router-link>
     </div>
-    <router-view />
+    <transition name="fade-move">
+      <router-view />
+    </transition>
   </div>
 </template>
 
@@ -19,14 +22,28 @@
 
 #nav {
   padding: 30px;
-
   a {
     font-weight: bold;
     color: #2c3e50;
-
     &.router-link-exact-active {
       color: #42b983;
     }
   }
+}
+
+.fade-move-enter-active,
+.fade-move-leave-active {
+  transition: 0.3s all ease;
+  // position: absolute
+}
+.fade-move-enter,
+.fade-move-leave-to {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+.fade-move-enter-to,
+.fade-move-leave {
+  opacity: 1;
+  transform: translateX(0);
 }
 </style>

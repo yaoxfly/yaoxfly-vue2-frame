@@ -2,9 +2,11 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
-
     <span class="a">111</span>
     <Test></Test>
+    <transition name="fade-move">
+      <router-view />
+    </transition>
   </div>
 </template>
 
@@ -57,5 +59,21 @@ $a: red;
   color: $a;
   justify-content: center;
   font-size: 40px;
+}
+
+.fade-move-enter-active,
+.fade-move-leave-active {
+  transition: 0.3s all ease;
+  // position: absolute
+}
+.fade-move-enter,
+.fade-move-leave-to {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+.fade-move-enter-to,
+.fade-move-leave {
+  opacity: 1;
+  transform: translateX(0);
 }
 </style>
