@@ -10,13 +10,13 @@ function format(compoenntName) {
 module.exports = {
   vueTemplate: compoenntName => {
     return `<template>
- <div class="${compoenntName} ">
+ <div class="${compoenntName}">
    ${format(compoenntName)}组件
   </div>
 </template>
 <script>
 export default {
-  name: '${format(compoenntName)} '
+  name: '${format(compoenntName)}'
 }
 </script>
 <style lang="scss" scoped>
