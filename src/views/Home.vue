@@ -13,8 +13,11 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/hello-world/";
+import mixinsText from "@/mixins/mixinsText";
+
 export default {
   name: "Home",
+  mixins: [mixinsText],
   components: {
     HelloWorld
   },
@@ -30,6 +33,7 @@ export default {
     // console.log(this.$store.getters.getTest);
     // console.log(this.$store.state.test);
     // console.log(this.$store.state.test.modules);
+    // this.showMixins();
   },
 
   methods: {

@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+
+    <% for(let css of htmlWebpackPlugin.options.cdn.css) { %>
+    <link href="<%=css%>" rel="preload" as="style" />
+    <link rel="stylesheet" href="<%=css%>" as="style" />
+    <% } %> <% for(let js of htmlWebpackPlugin.options.cdn.js) { %>
+    <link href="<%=js%>" rel="preload" as="script" />
+    <script src="<%=js%>"></script>
+    <% } %>
+
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
@@ -24,11 +33,11 @@
     要替换成付费cdn，稳定快 
     js类型文件，cdn不能放在body外，会报错。
   -->
-    <script src="https://unpkg.zhimg.com/vue@2.6.11/dist/vue.runtime.min.js"></script>
-    <script src="https://unpkg.zhimg.com/vuex@3.0.1/dist/vuex.min.js"></script>
-    <script src="https://unpkg.zhimg.com/vue-router@3.1.5/dist/vue-router.min.js"></script>
+    <!-- <script src="https://unpkg.zhimg.com/vue@2.6.11/dist/vue.runtime.min.js"></script> -->
+    <!-- <script src="https://unpkg.zhimg.com/vuex@3.0.1/dist/vuex.min.js"></script>
+    <script src="https://unpkg.zhimg.com/vue-router@3.1.5/dist/vue-router.min.js"></script> -->
     <!-- <script src="https://unpkg.zhimg.com/axios@0.19.2/dist/axios.min.js"></script> -->
-    <script src="https://unpkg.zhimg.com/flyio@0.6.14/dist/fly.min.js"></script>
+    <!-- <script src="https://unpkg.zhimg.com/flyio@0.6.14/dist/fly.min.js"></script> -->
     <!-- <script src="https://unpkg.zhimg.com/element-ui@2.13.0/lib/index.js"></script> -->
   </body>
 </html>
