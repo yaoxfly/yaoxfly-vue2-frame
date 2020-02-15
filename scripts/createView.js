@@ -40,7 +40,6 @@ process.stdin.on("data", async chunk => {
   if (!componentVueName.endsWith(".vue")) {
     componentVueName += ".vue";
   }
-
   /**
    * vue组件目录路径
    */
