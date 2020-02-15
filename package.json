@@ -6,8 +6,8 @@
     "serve": "vue-cli-service serve --mode development",
     "build": "vue-cli-service build --mode production",
     "build:test": "vue-cli-service build --mode test",
-    "create:comp": "node ./scripts/createComponent",
-    "create:view": "node ./scripts/createView",
+    "create:comp": "node ./node_modules/yaoxfly-auto-components/lib/createComponent",
+    "create:view": "node ./node_modules/yaoxfly-auto-components/lib/createView",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -41,6 +41,7 @@
     "prettier": "^1.19.1",
     "sass": "^1.25.0",
     "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "yaoxfly-auto-components": "^0.1.1"
   }
 }
