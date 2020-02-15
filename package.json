@@ -7,6 +7,7 @@
     "build": "vue-cli-service build --mode production",
     "build:test": "vue-cli-service build --mode test",
     "create:comp": "node ./scripts/createComponent",
+    "create:views": "node ./scripts/createView",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
