@@ -9,13 +9,13 @@ Vue.use(YxRequest);
 const $this = new Vue();
 const ONLINE_DOMAN_NAME = window.location.origin; //协议，域名，端口
 const localhost = "http://www.yaoxfly.com";
-import axios from "axios";
+// import axios from "axios";
 // let loading = ""; //动画
 export default new YxRequest({
   //请求配置
   requestConfig: {
-    request: axios, //请求名 flyio/axios
-    type: "axios", //请求类型
+    request: fly, //请求名 flyio/axios
+    type: "fly", //请求类型
     qs: qs,
     headers: {
       // token: 22221111,

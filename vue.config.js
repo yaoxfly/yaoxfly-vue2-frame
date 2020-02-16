@@ -7,7 +7,7 @@ function resolve(dir) {
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const productionGzipExtensions = ["js", "css"];
 const isProduction = process.env.NODE_ENV === "production";
-
+const cdnDomian = "http://ply4cszel.bkt.clouddn.com";
 module.exports = {
   pages: {
     index: {
@@ -44,7 +44,7 @@ module.exports = {
 
   publicPath:
     process.env.NODE_ENV === "production"
-      ? "/" //线上目录地址
+      ? cdnDomian //上线地址有包括目录的就加/cdn地址
       : "/",
   productionSourceMap: false, // 生产环境是否生成 source map
   chainWebpack: config => {
