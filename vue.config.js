@@ -7,7 +7,7 @@ function resolve(dir) {
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const productionGzipExtensions = ["js", "css"];
 const isProduction = process.env.NODE_ENV === "production";
-const cdnDomian = "http://ply4cszel.bkt.clouddn.com";
+const cdnDomian = "http://ply4cszel.bkt.clouddn.com"; //cdn域名
 module.exports = {
   pages: {
     index: {
