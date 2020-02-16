@@ -10,7 +10,7 @@ let pre = path.resolve(__dirname, "../dist/") + (isWindow ? "\\" : "");
 const files = glob.sync(
   `${path.join(
     __dirname,
-    "../dist/**/*.?(js|css|map|png|jpg|svg|woff|woff2|ttf|eot)"
+    "../dist/**/*.?(js|css|map|png|jpg|svg|woff|woff2|ttf|eot|gz)"
   )}`
 );
 pre = pre.replace(/\\/g, "/");
