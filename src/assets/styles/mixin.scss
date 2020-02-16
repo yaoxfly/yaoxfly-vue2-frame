@@ -1,0 +1,12 @@
+//多行超出省略号
+@mixin ell($line: 2) {
+  //要满足以下条件才可以
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*弹性伸缩盒子模型显示*/
+  display: -webkit-box;
+  /*限制在一个块元素显示的文本的行数*/
+  -webkit-line-clamp: $line;
+  /*设置或检索伸缩对象的子元素的排列方式*/
+  -webkit-box-orient: vertical;
+}

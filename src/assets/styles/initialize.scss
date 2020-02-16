@@ -1,0 +1,89 @@
+/*常用的一些初始化样式*/
+* {
+  //把我们的内外边距全部清0
+  margin: 0;
+  padding: 0;
+  /*css3的盒子模型，可以让border和padding不会撑大盒子。*/
+  box-sizing: border-box;
+}
+
+//em和i协调的文字不倾斜
+em,
+i {
+  font-style: normal;
+}
+
+//去掉li的小圆点
+li {
+  list-style: none;
+}
+
+img {
+  /*border:0 照顾低版本浏览器， 如果图片外面包含了链接会有边框的问题*/
+  border: 0;
+  //取消图片底侧有空白缝隙的问题
+  vertical-align: middle;
+}
+
+button {
+  /*当我们鼠标经过button 按钮的时候，鼠标会变成小手*/
+  cursor: pointer;
+}
+
+a {
+  //隐藏蓝色的线
+  text-decoration: none;
+}
+
+button,
+input {
+  font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB,
+    "\5B8B\4F53", sans-serif;
+  /*默认有灰色边框我们需要手动去掉*/
+  border: 0;
+  outline: none;
+}
+
+body {
+  //css3 抗锯齿性，让文字显示的更加清晰
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial,
+    Hiragino Sans /*"\5B8B\4F53" 是宋体的意思,用Unicode编码浏览器的兼容性小*/GB,
+    "\5B8B\4F53", sans-serif;
+}
+
+.hide,
+.none {
+  display: none;
+}
+
+/*清除浮动的*/
+.clearfix:after {
+  visibility: hidden;
+  clear: both;
+  display: block;
+  content: ".";
+  height: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+//把语义化标签转换为块级,兼容ie9
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}

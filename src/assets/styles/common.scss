@@ -1,42 +1,42 @@
 // 定义常用的类
 @for $i from 1 through 400 {
   //字体
-  @if ($i >= 8 && $i <=50) {
-    .f#{$i} {
+  @if ($i >= 8 and $i <=60) {
+    .f-#{$i} {
       font-size: ($i * 1px);
     }
   }
 
   // 左外边距
-  .ml#{$i} {
+  .ml-#{$i} {
     margin-left: ($i * 1px);
   }
   // 右外边距
-  .mr#{$i} {
+  .mr-#{$i} {
     margin-right: ($i * 1px);
   }
   // 上外边距
-  .mt#{$i} {
+  .mt-#{$i} {
     margin-top: ($i * 1px);
   }
   // 下外边距
-  .mb#{$i} {
+  .mb-#{$i} {
     margin-bottom: ($i * 1px);
   }
   // 做内边距
-  .pl#{$i} {
+  .pl-#{$i} {
     padding-left: ($i * 1px);
   }
   // 右内边距
-  .pr#{$i} {
+  .pr-#{$i} {
     padding-right: ($i * 1px);
   }
   // 上内边距
-  .pt#{$i} {
+  .pt-#{$i} {
     padding-top: ($i * 1px);
   }
   // 下内边距
-  .pb#{$i} {
+  .pb-#{$i} {
     padding-bottom: ($i * 1px);
   }
 }
