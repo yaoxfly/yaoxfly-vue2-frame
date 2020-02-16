@@ -20,10 +20,7 @@ module.exports = {
       // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
       title: "自定义通用框架",
       cdn: {
-        css: [
-          // element-ui css
-          // "//unpkg.com/element-ui/lib/theme-chalk/index.css"
-        ],
+        css: [],
         js: [
           // vue
           "//unpkg.zhimg.com/vue@2.6.11/dist/vue.runtime.min.js",
@@ -35,17 +32,12 @@ module.exports = {
           "//unpkg.zhimg.com/flyio@0.6.14/dist/fly.min.js"
           //axios
           // "//unpkg.zhimg.com/axios@0.19.2/dist/axios.min.js"
-          // element-ui js
-          // "//unpkg.com/element-ui/lib/index.js"
         ]
       }
     }
   },
 
-  publicPath:
-    process.env.NODE_ENV === "production"
-      ? cdnDomian //上线地址有包括目录的就加/cdn地址
-      : "/",
+  publicPath: isProduction ? cdnDomian : "/",
   productionSourceMap: false, // 生产环境是否生成 source map
   chainWebpack: config => {
     config
@@ -88,8 +80,9 @@ module.exports = {
       flyio: "flyio"
       // axios: "axios"
     };
-    if (isProduction) {
-      //gzip配置
+
+    //gzip配置
+    isProduction &&
       config.plugins.push(
         new CompressionWebpackPlugin({
           algorithm: "gzip",
@@ -99,7 +92,6 @@ module.exports = {
           cache: true
         })
       );
-    }
   },
 
   devServer: {
