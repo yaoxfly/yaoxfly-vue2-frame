@@ -20,8 +20,8 @@ const options = {
 };
 var config = {
   qiniu: {
-    accessKey: "IWUFFPQMvRtUOM82tMl8AR4o3ewKOeHQjmW2Ydph", // 个人中心 秘钥管理里的 AccessKey
-    secretKey: "tfzE43IPRjNS93QRIDX8SJUVBCZuQ9j3Jh5HPJBp", // 个人中心 秘钥管理里的 SecretKey
+    accessKey: "", // 个人中心 秘钥管理里的 AccessKey
+    secretKey: "", // 个人中心 秘钥管理里的 SecretKey
     bucket: options.scope,
     domain: "http://q5sfko979.bkt.clouddn.com"
   }
