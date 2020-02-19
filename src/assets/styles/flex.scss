@@ -1,0 +1,130 @@
+/*弹性布局 特别注意：  
+  1.flex-flow 属性是flex-direction和flex-wrap的缩写，表示flex布局的flow流动特性，语法如下：flex-flow: <‘flex-direction’> || <‘flex-wrap’>
+  2.flex属性是flex-grow，flex-shrink和flex-basis的缩写。flex: none | auto | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+*/
+
+// flex-flow
+$flex-direction: (
+  //从左到右--横向
+    "row": row,
+  //从右到左--横向
+    "row-r": row-reverse,
+  //从上到下--纵向
+    "col": column,
+  //从下到上--纵向
+    "col-r": column-reverse
+);
+
+//是否换行
+$flex-wrap: (
+  //不换行
+    "nowrap": nowrap,
+  //宽度不够就换行 正序
+    "wrap": wrap,
+  // 宽度不足换行显示，但是是从下往上开始。
+    "wrap-r": wrap-reverse
+);
+
+//flex容器水平方向对齐方式 (横向-水平)
+$justify-content: (
+  //横向左对齐
+    "start": flex-start,
+  //横向右对齐。
+    "end": flex-end,
+  //横向居中对齐
+    "center": center,
+  //表现为两端对齐。between是中间的意思，意思是多余的空白间距只在元素中间区域分配
+    "between": space-between,
+  //around是环绕的意思，意思是每个flex子项两侧都环绕互不干扰的等宽的空白间距，最终视觉上边缘两侧的空白只有中间空白宽度一半
+    "around": space-around,
+  //evenly是匀称、平等的意思。也就是视觉上，每个flex子项两侧空白间距完全相等。
+    "evenly": space-evenly
+);
+
+/*flex容器纵向方向对齐方式(纵向-针对容器-面)
+ align-content可以看成和justify-content是相似且对立的属性，
+ 如果所有flex子项只有一行，则align-content属性是没有任何效果的。
+*/
+
+$align-items: (
+  //容器内顶部对齐(纵向)
+    "start": flex-start,
+  //容器内底部对齐(纵向)
+    "end": flex-end,
+  //容器内居中对齐(纵向)
+    "center": center,
+  //flex子项都相对于flex容器的基线对齐,视觉上比flex-end的多个padding-bottom
+    "baseline": baseline,
+  //每一行flex子元素都等比例拉伸。例如，如果共两行flex子元素，则每一行拉伸高度是50%。(等高)
+    "stretch": stretch
+);
+
+/*align-self指控制单独某一个flex子项的垂直对齐方式，写在flex容器上的这个align-items属性，后面是items，
+有个s，表示子项们，是全体；这里是self，单独一个个体。其他区别不大，语法几乎一样：
+*/
+
+$align-self: (
+  "auto": auto,
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "baseline": baseline,
+  "stretch": stretch
+);
+
+/*
+ * flex 布局
+ * $direction 主轴方向
+ */
+@mixin flex($direction: row, $inline: flex) {
+  display: $inline;
+  flex-flow: $direction map-get($flex-wrap, nowrap);
+}
+
+//水平垂直居中
+@mixin center($direction: row) {
+  @include flex($direction);
+  justify-content: map-get($justify-content, center);
+  align-items: map-get($align-items, center);
+}
+
+//横向的垂直居中 默认0间距居中
+@mixin flex_row($justify-content: center) {
+  @include flex(row);
+  justify-content: $justify-content;
+  align-items: map-get($align-items, center);
+}
+
+//纵向的垂直居中
+@mixin flex_column($justify-content: center) {
+  @include flex(column);
+  justify-content: $justify-content;
+  align-items: map-get($align-items, center);
+}
+
+//子类
+@mixin flex_item($flex: 0 1 auto, $order: 0, $align-self: auto) {
+  flex: $flex;
+  order: $order; //排序
+  align-self: $align-self; //单独一个孩子控制子项目
+}
+
+.flex-row {
+  @include flex(row);
+}
+.flex-column {
+  @include flex(column);
+}
+
+//兼容性好
+.flex-row_space_evenly {
+  @include flex_row(space-between);
+  &:before {
+    //主要是这两句在起作用
+    content: "";
+  }
+  &:after {
+    content: "";
+  }
+}
+/*等高布局:父只要display:flex,子flex :1等属性配置即可 */

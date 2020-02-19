@@ -10,3 +10,21 @@
   /*设置或检索伸缩对象的子元素的排列方式*/
   -webkit-box-orient: vertical;
 }
+
+//宽高
+@mixin wh($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+//字体大小、行高、字体
+@mixin fl($size, $line-height) {
+  font-size: $size;
+  line-height: $line-height;
+}
+
+//字体大小，颜色
+@mixin fc($size, $color) {
+  font-size: $size;
+  color: $color;
+}

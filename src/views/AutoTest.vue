@@ -1,6 +1,11 @@
 <template>
   <div class="auto-test">
     <h1 class="ml-50 auto-test-mixin">This is an AutoTest page</h1>
+    <div class="auto-test-mixin ">
+      <div class="column">111111111</div>
+      <div class="column">111111111</div>
+      <div class="column">111111111</div>
+    </div>
   </div>
 </template>
 
@@ -11,10 +16,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.auto-test {
+  width: 100%;
+}
+
 .auto-test-mixin {
-  width: 150px;
-  height: 80px;
-  margin: 0 auto;
-  @include ell(2);
+  background: yellow;
+  @include flex_column(center);
 }
 </style>

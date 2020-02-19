@@ -2,7 +2,7 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
-    <span class="a">111</span>
+
     <Test></Test>
     <transition name="fade-move">
       <router-view />
@@ -57,12 +57,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-$a: red;
-.a {
-  display: flex;
-  color: $a;
-  justify-content: center;
-  font-size: 40px;
-}
-</style>
+<style lang="scss" scoped></style>

@@ -40,3 +40,23 @@
     padding-bottom: ($i * 1px);
   }
 }
+
+//行内元素水平居中
+.text-c {
+  text-align: center;
+}
+
+// 行内块元素
+.inline {
+  display: inline-block;
+}
+
+//纵向中间内容间距平均分布，可结合flex
+.column:nth-child(2n) {
+  margin: 10px 0;
+}
+
+//横向中间内容间距平均分布，可结合flex
+.row:nth-child(2n) {
+  margin: 0 10px;
+}
