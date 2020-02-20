@@ -1,37 +1,58 @@
 # yaoxfly-vue2-frame
 
 #### 介绍
-基于vue-cli4 创建的自定义框架，集成了vue2.6.x 、axios/flyio、vuex，router、eslint等框架自带和自己封装的一些基础库和插件，包括二次封装的axios/flyio、开发常用的公共css、公用方法（插件），手淘rem配置（插件），以及一些常用的配置  gzip、cdn 、keep-alive等优化。
 
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+基于 vue-cli4 创建的自定义框架，集成了 vue2.6.x 、axios/flyio、vuex，router、eslint 等框架自带和自己封装的一些基础库和插件，包括二次封装的 axios/flyio、开发常用的公共 css、公用方法（插件），rem 配置（插件），以及一些常用的配置 gzip、cdn 、keep-alive 等优化，用命令创建新的组件，自动导入公共组件，打包自动提交静态文件到七牛云 cdn。
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+- 安装依赖
 
-#### 参与贡献
+```js
+ npm i
+```
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+- 开发模式启动
 
+```js
+ npm run serve
+```
 
-#### 码云特技
+- 打包模式构建--测试线
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+```js
+ npm run build:test
+```
+
+- 打包模式构建--正式线
+
+```js
+ npm run build
+```
+
+- 组件生成--需要被引入的组件
+
+```js
+ npm run create:comp
+```
+
+- 页面组件生成
+
+```js
+ npm run create:view
+```
+
+- 新增的环境变量
+
+```js
+VUE_APP_CURRENT_MODE = "development"; //开发
+VUE_APP_CURRENT_MODE = "test"; //测试
+VUE_APP_CURRENT_MODE = "production"; //正式
+```
+
+#### 功能
+
+- [x] 通过命令生成组件
+- [x] axios/flyio 封装,插件的形式引入，[npm]
+
+[1]: (https://gitee.com/yaoxfly/yaoxfly-request)
