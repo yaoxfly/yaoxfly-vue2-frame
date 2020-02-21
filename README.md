@@ -87,7 +87,7 @@ VUE_APP_CURRENT_MODE = "production"; //正式
 
 &nbsp;&nbsp;&nbsp;&nbsp;本项目的工具类(公用 js 方法)可以用于 h5 端（小程序不能用）不依赖任何框架，在 vue、react、angular 等下都可通用 ，目前封装的方法有限,有待完善
 
-- [yaoxfly-auto-components](https://www.npmjs.com/package/yaoxfly-utils)(自写插件)
+- [yaoxfly-auto-components](https://www.npmjs.com/package/yaoxfly-auto-components)(自写插件)
 
 通过命令自动生成组件，包括页面组件和外部引用的组件。
 
