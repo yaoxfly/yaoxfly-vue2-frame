@@ -2,7 +2,7 @@
 
 #### 介绍
 
-&nbsp;&nbsp;&nbsp;&nbsp;基于 vue-cli4 创建的自定义优化改造的框架，集成了 vue2.6.11 、axios/flyio、vuex，router、eslint 等框架自带的和自己封装的一些类库和插件，包括二次封装的 axios/flyio、开发常用的公共 css、公用方法，rem 配置，以及一些常用的配置 gzip、cdn 、keep-alive 等优化。用命令创建新的组件，自动导入公共组件，打包自动提交静态文件到七牛云 cdn 等功能，本框架未添加任何 ui 框架，可自行添加改造 ,pc 端、移动端都可。
+&nbsp;&nbsp;&nbsp;&nbsp;基于 vue-cli4 创建的自定义优化改造的框架，集成了 vue2.6.11 、axios/flyio、vuex，router、eslint 等框架自带的和自己封装的一些类库和插件，包括二次封装的 axios/flyio、开发常用的公共 css、公用方法，rem 配置，以及一些常用的配置 gzip、cdn 、keep-alive 等优化。用命令创建新的组件，自动导入公共组件，打包自动提交静态文件到七牛云 cdn 等功能，本框架未添加任何 ui 框架，可自行添加改造 ,pc 端、移动端都可以。
 
 #### 使用说明
 
